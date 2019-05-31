@@ -1,5 +1,11 @@
+import path from 'path'
 import pkg from './package'
-const path = require('path')
+import enData from './contents/en/data.json'
+import cnData from './contents/cn/data.json'
+const blogs = {
+  en: enData.posts,
+  cn: cnData.posts
+}
 
 export default {
   mode: 'universal',
@@ -78,6 +84,12 @@ export default {
    ** Nuxt.js modules
    */
   modules: [],
+
+  generate: {
+    routes: ['/blog/cn', '/blog/en']
+      .concat(blogs.cn.map(blog => `/blog/cn/${blog.title}`))
+      .concat(blogs.en.map(blog => `/blog/en/${blog.title}`))
+  },
 
   /*
    ** Build configuration
