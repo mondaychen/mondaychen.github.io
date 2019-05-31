@@ -1,79 +1,47 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two" />
-    <div class="Triangle Triangle--one" />
-    <div class="Triangle Triangle--three" />
-    <div class="Triangle Triangle--four" />
+  <div id="logo">
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="121.12px"
+      height="111.782px"
+      viewBox="0 0 121.12 111.782"
+      enable-background="new 0 0 121.12 111.782"
+      xml:space="preserve"
+    >
+      <path
+        d="M30.146,51.223v60.56H0V0.267l60.293,42.152L121.12,0v29.346L60.293,74.433L30.146,51.223z"
+        class="p1"
+      ></path>
+      <polygon
+        points="121.12,37.884 121.12,111.783 90.972,111.783 90.972,60.027"
+        class="p2"
+      ></polygon>
+    </svg>
   </div>
 </template>
 
-<style>
-.VueToNuxtLogo {
-  display: inline-block;
-  animation: turn 2s linear forwards 1s;
-  transform: rotateX(180deg);
-  position: relative;
-  overflow: hidden;
-  height: 180px;
-  width: 245px;
-}
+<style lang="scss">
+@import '~/plugins/theme.scss';
 
-.Triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
+#logo {
+  height: auto;
+  text-align: center;
+  margin: 20px auto;
 }
-
-.Triangle--one {
-  border-left: 105px solid transparent;
-  border-right: 105px solid transparent;
-  border-bottom: 180px solid #41b883;
+#logo svg {
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  fill: $primary;
 }
-
-.Triangle--two {
-  top: 30px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 87.5px solid transparent;
-  border-right: 87.5px solid transparent;
-  border-bottom: 150px solid #3b8070;
+#logo .p2 {
+  transition: all 0.3s;
 }
-
-.Triangle--three {
-  top: 60px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-bottom: 120px solid #35495e;
-}
-
-.Triangle--four {
-  top: 120px;
-  left: 70px;
-  animation: godown 0.5s linear forwards 3s;
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-bottom: 60px solid #fff;
-}
-
-@keyframes turn {
-  100% {
-    transform: rotateX(0deg);
-  }
-}
-
-@keyframes godown {
-  100% {
-    top: 180px;
-  }
-}
-
-@keyframes goright {
-  100% {
-    left: 70px;
-  }
+#logo:hover .p2 {
+  fill: $accent;
 }
 </style>

@@ -21,7 +21,7 @@
         md-swipeable
       >
         <md-toolbar class="md-transparent" md-elevation="0">
-          Navigation
+          <logo />
         </md-toolbar>
 
         <md-list>
@@ -55,7 +55,10 @@
 </template>
 
 <script>
+import Logo from '~/components/Logo'
+
 export default {
+  components: { Logo },
   name: 'DefaultLayout',
   data: () => ({
     showNavigation: false
