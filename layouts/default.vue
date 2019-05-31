@@ -8,7 +8,7 @@
         >
           <md-icon>menu</md-icon>
         </md-button>
-        <span class="md-title">My Title</span>
+        <span class="md-title">{{ title }}</span>
         <div class="md-toolbar-section-end slogon">
           Don't you love Monday
         </div>
@@ -53,8 +53,28 @@ export default {
   name: 'DefaultLayout',
   components: { Logo },
   data: () => ({
-    showNavigation: false
-  })
+    showNavigation: false,
+    title: 'About me'
+  }),
+  watch: {
+    $route(to) {
+      this.updateTitle(to)
+    }
+  },
+  created() {
+    this.updateTitle(this.$route)
+  },
+  methods: {
+    updateTitle(matchedRoute) {
+      if (matchedRoute.name === 'index') {
+        this.title = 'About me'
+      } else if (matchedRoute.params.lang === 'cn') {
+        this.title = '不动如山 - 辰光的博客'
+      } else if (matchedRoute.params.lang === 'en') {
+        this.title = "Mengdi's Blog"
+      }
+    }
+  }
 }
 </script>
 

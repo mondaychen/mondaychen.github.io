@@ -19,6 +19,9 @@ const blogs = {
 export default {
   name: 'BlogList',
   validate({ params }) {
+    if (!params.lang || !params.article) {
+      return false
+    }
     const lang = params.lang.toLowerCase()
     const title = params.article
     return blogs[lang].some(blog => blog.title === title)
