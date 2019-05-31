@@ -7,7 +7,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: "Monday's here",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -44,8 +44,17 @@ export default {
         type: 'image/png',
         href: '/favicon/favicon-16x16.png',
         sizes: '16x16'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons'
       }
     ]
+  },
+
+  router: {
+    linkActiveClass: 'active-link'
   },
 
   /*
@@ -61,7 +70,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/vue-material'],
 
   /*
    ** Nuxt.js modules

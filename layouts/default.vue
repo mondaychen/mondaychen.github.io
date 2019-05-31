@@ -1,13 +1,72 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="page-container md-layout-column">
+    <md-app>
+      <md-app-toolbar class="md-primary">
+        <md-button
+          class="md-icon-button menu-button"
+          @click="showNavigation = true"
+        >
+          <md-icon>menu</md-icon>
+        </md-button>
+        <span class="md-title">My Title</span>
+        <div class="md-toolbar-section-end">
+          Don't you love Monday
+        </div>
+      </md-app-toolbar>
+
+      <md-app-drawer
+        class="drawer"
+        md-permanent="full"
+        :md-active.sync="showNavigation"
+        md-swipeable
+      >
+        <md-toolbar class="md-transparent" md-elevation="0">
+          Navigation
+        </md-toolbar>
+
+        <md-list>
+          <md-list-item>
+            <md-icon>move_to_inbox</md-icon>
+            <span class="md-list-item-text">Inbox</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-icon>send</md-icon>
+            <span class="md-list-item-text">Sent Mail</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-icon>delete</md-icon>
+            <span class="md-list-item-text">Trash</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-icon>error</md-icon>
+            <span class="md-list-item-text">Spam</span>
+          </md-list-item>
+        </md-list>
+      </md-app-drawer>
+
+      <md-app-content>
+        <nuxt />
+      </md-app-content>
+    </md-app>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'DefaultLayout',
+  data: () => ({
+    showNavigation: false
+  })
+}
+</script>
+
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -23,33 +82,15 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+</style>
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+<style scoped>
+.drawer {
+  width: 280px;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+@media (min-width: 600px) {
+  .menu-button {
+    display: none;
+  }
 }
 </style>
