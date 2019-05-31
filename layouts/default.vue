@@ -1,6 +1,6 @@
 <template>
   <div class="page-container md-layout-column">
-    <md-app>
+    <md-app id="app">
       <md-app-toolbar class="md-primary title-bar">
         <md-button
           class="md-icon-button menu-button"
@@ -30,16 +30,16 @@
           </md-list-item>
 
           <md-list-item to="/blog/en">
-            <span class="md-list-item-text">Sent Mail</span>
+            <span class="md-list-item-text">blog/en</span>
           </md-list-item>
 
-          <md-list-item>
-            <span class="md-list-item-text">Trash</span>
+          <md-list-item to="/blog/cn">
+            <span class="md-list-item-text">blog/cn</span>
           </md-list-item>
         </md-list>
       </md-app-drawer>
 
-      <md-app-content>
+      <md-app-content class="content-container">
         <nuxt />
       </md-app-content>
     </md-app>
@@ -50,8 +50,8 @@
 import Logo from '~/components/Logo'
 
 export default {
-  components: { Logo },
   name: 'DefaultLayout',
+  components: { Logo },
   data: () => ({
     showNavigation: false
   })
@@ -59,12 +59,8 @@ export default {
 </script>
 
 <style scoped>
-.title-bar {
-  height: 120px;
-}
-.title-bar .md-title {
-  font-size: 32px;
-  line-height: 1.2em;
+#app {
+  min-height: 100vh;
 }
 .slogon {
   opacity: 0.75;
@@ -79,9 +75,23 @@ export default {
 .drawer .exact-active-link {
   background-color: #eee;
 }
+.content-container {
+  padding: 10px;
+}
+
 @media (min-width: 600px) {
+  .title-bar {
+    height: 120px;
+  }
+  .title-bar .md-title {
+    font-size: 32px;
+    line-height: 1.2em;
+  }
   .menu-button {
     display: none;
+  }
+  .content-container {
+    padding: 10px 20px 20px 40px;
   }
 }
 </style>
