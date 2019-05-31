@@ -86,9 +86,12 @@ export default {
   modules: [],
 
   generate: {
-    routes: ['/blog/cn', '/blog/en']
-      .concat(blogs.cn.map(blog => `/blog/cn/${blog.title}`))
-      .concat(blogs.en.map(blog => `/blog/en/${blog.title}`))
+    routes: [
+      '/blog/cn',
+      '/blog/en',
+      ...blogs.cn.map(blog => `/blog/cn/${blog.title}`),
+      ...blogs.en.map(blog => `/blog/en/${blog.title}`)
+    ]
   },
 
   /*
