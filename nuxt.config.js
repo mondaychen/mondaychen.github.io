@@ -54,7 +54,8 @@ export default {
   },
 
   router: {
-    linkActiveClass: 'active-link'
+    linkActiveClass: 'active-link',
+    linkExactActiveClass: 'exact-active-link'
   },
 
   /*

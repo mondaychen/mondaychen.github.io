@@ -1,7 +1,7 @@
 <template>
   <div class="page-container md-layout-column">
     <md-app>
-      <md-app-toolbar class="md-primary">
+      <md-app-toolbar class="md-primary title-bar">
         <md-button
           class="md-icon-button menu-button"
           @click="showNavigation = true"
@@ -9,7 +9,7 @@
           <md-icon>menu</md-icon>
         </md-button>
         <span class="md-title">My Title</span>
-        <div class="md-toolbar-section-end">
+        <div class="md-toolbar-section-end slogon">
           Don't you love Monday
         </div>
       </md-app-toolbar>
@@ -25,24 +25,16 @@
         </md-toolbar>
 
         <md-list>
-          <md-list-item>
-            <md-icon>move_to_inbox</md-icon>
-            <span class="md-list-item-text">Inbox</span>
+          <md-list-item to="/">
+            <span class="md-list-item-text">About me</span>
           </md-list-item>
 
-          <md-list-item>
-            <md-icon>send</md-icon>
+          <md-list-item to="/blog/en">
             <span class="md-list-item-text">Sent Mail</span>
           </md-list-item>
 
           <md-list-item>
-            <md-icon>delete</md-icon>
             <span class="md-list-item-text">Trash</span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon>error</md-icon>
-            <span class="md-list-item-text">Spam</span>
           </md-list-item>
         </md-list>
       </md-app-drawer>
@@ -66,30 +58,26 @@ export default {
 }
 </script>
 
-<style>
-html {
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-</style>
-
 <style scoped>
+.title-bar {
+  height: 120px;
+}
+.title-bar .md-title {
+  font-size: 32px;
+  line-height: 1.2em;
+}
+.slogon {
+  opacity: 0.75;
+}
 .drawer {
   width: 280px;
+}
+.drawer .md-list-item-text {
+  text-align: center;
+  display: inline-block;
+}
+.drawer .exact-active-link {
+  background-color: #eee;
 }
 @media (min-width: 600px) {
   .menu-button {
