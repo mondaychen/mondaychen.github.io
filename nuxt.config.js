@@ -98,11 +98,18 @@ export default {
    ** Build configuration
    */
   build: {
+    // extract CSS, mainly for plugins but also good for layouts and pages
+    extractCSS: true,
+
+    splitChunks: {
+      layouts: false,
+      pages: false, // by default true, will cause bad experience
+      commons: true
+    },
+
     /*
      ** You can extend webpack config here
      */
-    extractCSS: true,
-
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
