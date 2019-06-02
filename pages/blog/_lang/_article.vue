@@ -38,6 +38,9 @@ export default {
       md,
       ...currentArticle
     }
+  },
+  mounted() {
+    this.$Prism.highlightAll()
   }
 }
 </script>

@@ -78,7 +78,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-material'],
+  plugins: ['~/plugins/vue-material', '~/plugins/prism.js'],
 
   /*
    ** Nuxt.js modules
@@ -101,6 +101,8 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    extractCSS: true,
+
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

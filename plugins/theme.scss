@@ -1,7 +1,5 @@
 @import '~vue-material/dist/theme/engine'; // Import the theme engine
-
-$primary: #37474f;
-$accent: #ee6e73;
+@import './theme-variables.scss';
 
 @include md-register-theme(
   'default',

@@ -25,7 +25,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/plugins/theme.scss';
+@import '~/plugins/theme-variables.scss';
 
 .logo {
   height: auto;
