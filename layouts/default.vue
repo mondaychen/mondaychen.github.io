@@ -20,7 +20,7 @@
         :md-active.sync="showNavigation"
         md-swipeable
       >
-        <md-toolbar class="md-transparent" md-elevation="0">
+        <md-toolbar class="logo-wrapper md-transparent" md-elevation="0">
           <logo />
         </md-toolbar>
 
@@ -82,6 +82,9 @@ export default {
 #app {
   min-height: 100vh;
 }
+.logo-wrapper {
+  padding: 0;
+}
 .slogon {
   opacity: 0.75;
 }
@@ -92,7 +95,7 @@ export default {
   text-align: center;
   display: inline-block;
 }
-.drawer .exact-active-link {
+.drawer .md-list .exact-active-link {
   background-color: #eee;
 }
 .content-container {

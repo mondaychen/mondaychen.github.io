@@ -1,5 +1,5 @@
 <template>
-  <div id="logo">
+  <md-button class="logo" to="/">
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -21,27 +21,37 @@
         class="p2"
       ></polygon>
     </svg>
-  </div>
+  </md-button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '~/plugins/theme.scss';
 
-#logo {
+.logo {
   height: auto;
   text-align: center;
-  margin: 20px auto;
-}
-#logo svg {
-  height: 80px;
-  display: block;
   margin: 0 auto;
-  fill: $primary;
-}
-#logo .p2 {
-  transition: all 0.3s;
-}
-#logo:hover .p2 {
-  fill: $accent;
+  width: 100%;
+  padding: 19px 0;
+  background: none;
+
+  svg {
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+    fill: $primary;
+  }
+  .p2 {
+    transition: all 0.3s;
+  }
+  &:hover {
+    background: none !important;
+  }
+  &:hover .p2 {
+    fill: $accent;
+  }
+  &:hover::before {
+    background: #bbb;
+  }
 }
 </style>
