@@ -1,22 +1,29 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="title">
-        mondaychen.github.io
+      <h1 class="name">
+        Mengdi "Monday" Chen | 陈蒙迪
       </h1>
-      <h2 class="subtitle">
-        Monday Chen&#39;s personal website and blog
-      </h2>
+      <blockquote>
+        <p>Has a programmer Buddha-nature or not?</p>
+        <p>Mu.</p>
+      </blockquote>
     </div>
   </section>
 </template>
 
-<style>
-.subtitle {
-  font-weight: 300;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+<style lang="scss" scoped>
+@import '~/plugins/theme-variables.scss';
+
+.name {
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid $primary;
 }
 
 .links {
