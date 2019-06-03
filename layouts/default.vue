@@ -78,10 +78,46 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #app {
   min-height: 100vh;
 }
+@font-face {
+  font-family: 'Flaticon';
+  src: url('/font/flaticon.eot');
+  src: url('/font/flaticon.eot#iefix') format('embedded-opentype'),
+    url('/font/flaticon.woff') format('woff'),
+    url('/font/flaticon.ttf') format('truetype'),
+    url('/font/flaticon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.flaticon {
+  font-family: Flaticon;
+  font-size: 24px;
+  font-style: normal;
+}
+.flaticon-douban:before {
+  content: '\e000';
+}
+.flaticon-facebook:before {
+  content: '\e001';
+}
+.flaticon-github:before {
+  content: '\e002';
+}
+.flaticon-linkedin:before {
+  content: '\e003';
+}
+.flaticon-twitter:before {
+  content: '\e004';
+}
+.flaticon-weibo:before {
+  content: '\e005';
+}
+</style>
+
+<style scoped>
 .logo-wrapper {
   padding: 0;
 }
