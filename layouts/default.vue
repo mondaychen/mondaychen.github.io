@@ -39,8 +39,46 @@
         </md-list>
       </md-app-drawer>
 
-      <md-app-content class="content-container">
-        <nuxt />
+      <md-app-content class="app-content">
+        <nuxt class="page-container" />
+        <footer id="footer">
+          <div class="copyright">
+            Developed &amp; Designed by Mengdi Chen. All rights reserved.<br />Inspired
+            by&nbsp;<a
+              href="https://www.google.com/design/spec/material-design/introduction.html"
+              target="_blank"
+              >Material design</a
+            >.<br />All articles are licensed by&nbsp;<a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              title="Creative Commons BY 3.0"
+              >CC BY 3.0</a
+            >
+          </div>
+          <div class="credit">
+            Icons made by&nbsp;<a
+              href="http://www.flaticon.com/authors/dave-gandy"
+              target="_blank"
+              title="Dave Gandy"
+              >Dave Gandy</a
+            >,&nbsp;<a
+              href="http://www.flaticon.com/authors/freepik"
+              target="_blank"
+              title="Freepik"
+              >Freepik</a
+            >&nbsp;from&nbsp;<a
+              href="http://www.flaticon.com"
+              target="_blank"
+              title="Flaticon"
+              >www.flaticon.com</a
+            >&nbsp;is licensed by&nbsp;<a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              title="Creative Commons BY 3.0"
+              >CC BY 3.0</a
+            >
+          </div>
+        </footer>
       </md-app-content>
     </md-app>
   </div>
@@ -69,7 +107,7 @@ export default {
       if (matchedRoute.name === 'index') {
         this.title = 'About me'
       } else if (matchedRoute.params.lang === 'cn') {
-        this.title = '不动如山 - 辰光的博客'
+        this.title = '不动如山'
       } else if (matchedRoute.params.lang === 'en') {
         this.title = "Mengdi's Blog"
       }
@@ -134,8 +172,17 @@ export default {
 .drawer .md-list .exact-active-link {
   background-color: #eee;
 }
-.content-container {
+.app-content {
   padding: 10px;
+}
+.page-container {
+  min-height: 60vh;
+}
+footer {
+  margin-top: 3em;
+  .credit {
+    font-size: 0.8em;
+  }
 }
 
 @media (min-width: 600px) {
@@ -149,7 +196,7 @@ export default {
   .menu-button {
     display: none;
   }
-  .content-container {
+  .app-content {
     padding: 10px 20px 20px 40px;
   }
 }
