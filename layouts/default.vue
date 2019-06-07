@@ -29,11 +29,11 @@
             <span class="md-list-item-text">About me</span>
           </md-list-item>
 
-          <md-list-item to="/blog/en">
+          <md-list-item class="blog-list" to="/blog/en">
             <span class="md-list-item-text">blog/en</span>
           </md-list-item>
 
-          <md-list-item to="/blog/cn">
+          <md-list-item class="blog-list" to="/blog/cn">
             <span class="md-list-item-text">blog/cn</span>
           </md-list-item>
         </md-list>
@@ -169,7 +169,8 @@ export default {
   text-align: center;
   display: inline-block;
 }
-.drawer .md-list .exact-active-link {
+.drawer .md-list .exact-active-link,
+.drawer .md-list .blog-list .active-link {
   background-color: #eee;
 }
 .app-content {
@@ -180,9 +181,11 @@ export default {
 }
 footer {
   margin-top: 3em;
-  .credit {
-    font-size: 0.8em;
-  }
+  font-weight: 300;
+  color: #666;
+}
+footer .credit {
+  font-size: 0.8em;
 }
 
 @media (min-width: 600px) {
