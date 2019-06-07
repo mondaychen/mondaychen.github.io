@@ -1,7 +1,14 @@
 <template>
   <section class="container">
     <div>
-      <h1>{{ title }}</h1>
+      <h1>
+        {{ title }}
+        <ul class="links">
+          <li v-for="link in links" :key="link.url" class="link">
+            [ <a :href="link.url" target="_blank">{{ link.name }}</a> ]
+          </li>
+        </ul>
+      </h1>
       <div class="subhead">
         <date-time :time="time" />
         <span v-if="location">@ {{ location }}</span>
@@ -44,7 +51,8 @@ export default {
       md,
       title: currentArticle.title,
       time: currentArticle.time,
-      location: currentArticle.location
+      location: currentArticle.location,
+      links: currentArticle.links || []
     }
   },
   mounted() {
@@ -56,6 +64,19 @@ export default {
 <style scoped>
 h1 {
   font-size: 22px;
+  margin-top: 1.5em;
+}
+.links {
+  display: inline-block;
+  list-style-type: none;
+  padding-left: 10px;
+  margin: 0;
+}
+.links .link {
+  display: inline;
+  margin: 0 0.25em;
+  font-size: 12px;
+  font-weight: 300;
 }
 .subhead {
   opacity: 0.54;

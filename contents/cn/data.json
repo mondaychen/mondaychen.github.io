@@ -4,7 +4,17 @@
       "title": "12-31-2018",
       "file": "12-31-2018.md",
       "time": 1546373999000,
-      "location": "New York"
+      "location": "New York",
+      "links": [
+        {
+          "name": "douban.com",
+          "url": "https://www.douban.com/note/702147375/"
+        },
+        {
+          "name": "weibo.com",
+          "url": "https://www.weibo.com/ttarticle/p/show?id=2309404323672432186979"
+        }
+      ]
     },
     {
       "title": "手艺人的十字路口",
