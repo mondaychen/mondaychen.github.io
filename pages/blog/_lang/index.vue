@@ -2,7 +2,7 @@
   <section class="container">
     <ul class="blog-list">
       <li v-for="post in posts" :key="post.title">
-        <nuxt-link class="title" :to="`/blog/${lang}/${post.title}`">
+        <nuxt-link class="title" :to="post.link">
           {{ post.title }}
         </nuxt-link>
         <div class="subhead">
@@ -16,13 +16,7 @@
 
 <script>
 import DateTime from '~/components/DateTime'
-import enData from '~/contents/en/data.json'
-import cnData from '~/contents/cn/data.json'
-
-const blogs = {
-  en: enData.posts,
-  cn: cnData.posts
-}
+import blogs from '~/contents/blogs'
 
 export default {
   name: 'BlogList',
@@ -33,12 +27,29 @@ export default {
       (params.lang.toLowerCase() === 'cn' || params.lang.toLowerCase() === 'en')
     )
   },
-  data() {
-    const lang = this.$route.params.lang.toLowerCase()
-    return {
-      lang,
-      posts: blogs[lang]
+  asyncData({ params }) {
+    const lang = params.lang.toLowerCase()
+    // const posts = blogs[lang].map(async blog => {
+    //   const md = await import(`~/contents/${blog.file}`)
+    //   return {
+    //     title: md.attributes.subject,
+    //     location: md.attributes.location
+    //   }
+    // })
+    async function asyncImport(blog) {
+      const md = await import(`~/contents/${blog.file}`)
+      return {
+        title: md.attributes.subject,
+        time: md.attributes.time,
+        link: `/blog/${lang}/${blog.url}`
+      }
     }
+
+    return Promise.all(blogs[lang].map(blog => asyncImport(blog))).then(res => {
+      return {
+        posts: res
+      }
+    })
   }
 }
 </script>

@@ -13,20 +13,14 @@
         <date-time :time="time" />
         <span v-if="location">@ {{ location }}</span>
       </div>
-      <div class="article-content" v-html="md.html"></div>
+      <div class="article-content" v-html="html"></div>
     </div>
   </section>
 </template>
 
 <script>
 import DateTime from '~/components/DateTime'
-import enData from '~/contents/en/data.json'
-import cnData from '~/contents/cn/data.json'
-
-const blogs = {
-  en: enData.posts,
-  cn: cnData.posts
-}
+import blogs from '~/contents/blogs'
 
 export default {
   name: 'BlogList',
@@ -36,22 +30,22 @@ export default {
       return false
     }
     const lang = params.lang.toLowerCase()
-    const title = params.article
-    return blogs[lang].some(blog => blog.title === title)
+    const url = params.article
+    return blogs[lang].some(blog => blog.url === url)
   },
   async asyncData({ params }) {
     const lang = params.lang.toLowerCase()
-    const title = params.article
+    const url = params.article
 
-    const currentArticle = blogs[lang].find(blog => blog.title === title)
+    const currentArticle = blogs[lang].find(blog => blog.url === url)
 
-    const md = await import(`~/contents/${lang}/${currentArticle.file}`)
+    const md = await import(`~/contents/${currentArticle.file}`)
 
     return {
-      md,
-      title: currentArticle.title,
-      time: currentArticle.time,
-      location: currentArticle.location,
+      html: md.html,
+      title: md.attributes.subject,
+      time: md.attributes.time,
+      location: md.attributes.location,
       links: currentArticle.links || []
     }
   },

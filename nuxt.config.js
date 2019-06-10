@@ -1,11 +1,6 @@
 import path from 'path'
 import pkg from './package'
-import enData from './contents/en/data.json'
-import cnData from './contents/cn/data.json'
-const blogs = {
-  en: enData.posts,
-  cn: cnData.posts
-}
+import blogs from './contents/blogs.js'
 
 export default {
   mode: 'universal',
@@ -89,8 +84,8 @@ export default {
     routes: [
       '/blog/cn',
       '/blog/en',
-      ...blogs.cn.map(blog => `/blog/cn/${blog.title}`),
-      ...blogs.en.map(blog => `/blog/en/${blog.title}`)
+      ...blogs.cn.map(blog => `/blog/cn/${blog.url}`),
+      ...blogs.en.map(blog => `/blog/en/${blog.url}`)
     ]
   },
 

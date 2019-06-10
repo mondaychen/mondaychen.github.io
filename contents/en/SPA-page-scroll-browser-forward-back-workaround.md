@@ -1,3 +1,9 @@
+---
+subject: 'A Workaround for offset re-location in Single-Page Apps'
+time: 1436500401017
+location: 'New York'
+---
+
 It's a shared view that a single-page application (SPA) offers users better experience. However, in order to gain the benefits, developers have to take care of a lot of details ourselves. Browser's navigation (back/forward) is one of them.
 
 Web applications often provide linkable, bookmarkable, shareable URLs for important locations in the app. In an SPA, either [HTML5 History API](https://css-tricks.com/using-the-html5-history-api/) or hash fragments (`#page`) is used to provide these permalinks. When a `popstate` or `hashchange` event is triggered, a listener function is executed, changing some part of the page instead of loading another page. A typical way (using jQuery) to replace content of the page when a route is matched is like this:
