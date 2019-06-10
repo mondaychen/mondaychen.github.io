@@ -29,13 +29,6 @@ export default {
   },
   asyncData({ params }) {
     const lang = params.lang.toLowerCase()
-    // const posts = blogs[lang].map(async blog => {
-    //   const md = await import(`~/contents/${blog.file}`)
-    //   return {
-    //     title: md.attributes.subject,
-    //     location: md.attributes.location
-    //   }
-    // })
     async function asyncImport(blog) {
       const md = await import(`~/contents/${blog.file}`)
       return {

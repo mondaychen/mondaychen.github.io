@@ -120,8 +120,7 @@ export default {
         test: /\.md$/,
         loader: 'frontmatter-markdown-loader'
       })
-      // config.resolve = config.module.resolve || {}
-      // config.resolve.alias = config.module.resolve.alias || {}
+
       config.resolve.alias['~'] = path.resolve(__dirname)
     }
   }
