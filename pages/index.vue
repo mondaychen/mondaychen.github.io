@@ -12,33 +12,66 @@
           href="https://github.com/mondaychen"
           target="_blank"
           class="flaticon flaticon-github"
-        ></a
-        ><a
+        ></a>
+        <a
+          href="https://twitter.com/home"
+          target="_blank"
+          class="flaticon flaticon-twitter"
+        ></a>
+        <a
           href="http://linkedin.com/in/mengdi"
           target="_blank"
           class="flaticon flaticon-linkedin"
-        ></a
-        ><a
-          href="http://www.weibo.com/cmonday"
-          target="_blank"
-          class="flaticon flaticon-weibo"
-        ></a
-        ><a
+        ></a>
+        <a
           href="http://www.douban.com/people/monday/"
           target="_blank"
           class="flaticon flaticon-douban"
-        ></a
-        ><a
+        ></a>
+        <a
           href="https://www.facebook.com/monday.chen"
           target="_blank"
           class="flaticon flaticon-facebook"
         ></a>
       </p>
+      <h2>Recent work</h2>
+      <ul class="experience-list">
+        <li>
+          <md-icon>all_inbox</md-icon>
+          <div class="desc">
+            <a href="https://github.com/mondaychen/file_organizer">
+              File Organzier
+            </a>
+            - AI-powered assistant to organize files on your computer.
+          </div>
+        </li>
+      </ul>
+      <h2>Open Source Contributions</h2>
+      <ul class="experience-list">
+        <li>
+          <md-icon>code</md-icon>
+          <div class="desc">
+            <a href="https://github.com/facebook/react">React</a> - The library
+            for web and native user interfaces
+          </div>
+        </li>
+        <li>
+          <md-icon>code</md-icon>
+          <div class="desc">
+            <a href="https://github.com/facebookexperimental/Recoil">Recoil</a>
+            - Experimental state management library for React apps
+          </div>
+        </li>
+      </ul>
       <h2>Experience</h2>
       <ul class="experience-list">
         <li>
           <md-icon>work</md-icon>
-          <div class="desc">Software Engineer @ FreeWheel (2016-current)</div>
+          <div class="desc">Software Engineer @ Meta (Facebook) (2019-now)</div>
+        </li>
+        <li>
+          <md-icon>work</md-icon>
+          <div class="desc">Software Engineer @ FreeWheel (2016-2019)</div>
         </li>
         <li>
           <md-icon>work</md-icon>

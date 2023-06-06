@@ -27,10 +27,6 @@
             <span class="md-list-item-text">About me</span>
           </md-list-item>
 
-          <md-list-item class="blog-list" to="/blog/en">
-            <span class="md-list-item-text">blog/en</span>
-          </md-list-item>
-
           <md-list-item class="blog-list" to="/blog/cn">
             <span class="md-list-item-text">blog/cn</span>
           </md-list-item>
