@@ -44,6 +44,7 @@
     "node-sass": "^8.0.0",
     "postcss": "^8.4.17",
     "prettier": "^2.7.1",
+    "push-dir": "^0.4.1",
     "sass-loader": "^10.4.1"
   }
 }
