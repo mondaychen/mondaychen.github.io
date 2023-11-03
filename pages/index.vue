@@ -67,7 +67,11 @@
       <ul class="experience-list">
         <li>
           <md-icon>work</md-icon>
-          <div class="desc">Software Engineer @ Meta (Facebook) (2019-now)</div>
+          <div class="desc">AI Engineer @ Normal Computing (2023-now)</div>
+        </li>
+        <li>
+          <md-icon>work</md-icon>
+          <div class="desc">Software Engineer @ Meta (Facebook) (2019-2023)</div>
         </li>
         <li>
           <md-icon>work</md-icon>
