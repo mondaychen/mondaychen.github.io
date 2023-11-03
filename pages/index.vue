@@ -14,7 +14,7 @@
           class="flaticon flaticon-github"
         ></a>
         <a
-          href="https://twitter.com/home"
+          href="https://twitter.com/mengdi_en"
           target="_blank"
           class="flaticon flaticon-twitter"
         ></a>

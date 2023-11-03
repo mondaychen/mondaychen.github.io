@@ -2,16 +2,29 @@
   <div class="page-container md-layout-column">
     <md-app id="app">
       <md-app-toolbar class="md-primary title-bar">
-        <md-button class="md-icon-button menu-button" @click="showNavigation = true">
+        <md-button
+          class="md-icon-button menu-button"
+          @click="showNavigation = true"
+        >
           <md-icon>menu</md-icon>
         </md-button>
         <span class="md-title">{{ title }}</span>
         <div class="md-toolbar-section-end">
-          <a id="slogon" href="https://www.youtube.com/watch?v=vos32LuLjZs" target="_blank">♫ Monday 和你走到 Sunday ♪</a>
+          <a
+            id="slogon"
+            href="https://www.youtube.com/watch?v=vos32LuLjZs"
+            target="_blank"
+            >♫ Monday 和你走到 Sunday ♪</a
+          >
         </div>
       </md-app-toolbar>
 
-      <md-app-drawer class="drawer" md-permanent="full" :md-active.sync="showNavigation" md-swipeable>
+      <md-app-drawer
+        class="drawer"
+        md-permanent="full"
+        :md-active.sync="showNavigation"
+        md-swipeable
+      >
         <md-toolbar class="logo-wrapper md-transparent" md-elevation="0">
           <site-logo />
         </md-toolbar>
@@ -31,19 +44,36 @@
         <nuxt class="page-container" />
         <footer id="footer">
           <div class="copyright">
-            Developed &amp; Designed by Mengdi Chen. All rights reserved.<br />Inspired
-            by&nbsp;<a href="https://www.google.com/design/spec/material-design/introduction.html"
-              target="_blank">Material design</a>.<br />All articles are licensed by&nbsp;<a
-              href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="Creative Commons BY 3.0">CC BY
-              3.0</a>
+            Developed &amp; Designed by Mengdi Chen. All rights reserved.<br />
+            All articles are licensed by&nbsp;<a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              title="Creative Commons BY 3.0"
+              >CC BY 3.0</a
+            >
           </div>
           <div class="credit">
-            Icons made by&nbsp;<a href="http://www.flaticon.com/authors/dave-gandy" target="_blank"
-              title="Dave Gandy">Dave Gandy</a>,&nbsp;<a href="http://www.flaticon.com/authors/freepik" target="_blank"
-              title="Freepik">Freepik</a>&nbsp;from&nbsp;<a href="http://www.flaticon.com" target="_blank"
-              title="Flaticon">www.flaticon.com</a>&nbsp;is licensed by&nbsp;<a
-              href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="Creative Commons BY 3.0">CC BY
-              3.0</a>
+            Icons made by&nbsp;<a
+              href="http://www.flaticon.com/authors/dave-gandy"
+              target="_blank"
+              title="Dave Gandy"
+              >Dave Gandy</a
+            >,&nbsp;<a
+              href="http://www.flaticon.com/authors/freepik"
+              target="_blank"
+              title="Freepik"
+              >Freepik</a
+            >&nbsp;from&nbsp;<a
+              href="http://www.flaticon.com"
+              target="_blank"
+              title="Flaticon"
+              >www.flaticon.com</a
+            >, licensed by&nbsp;<a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              title="Creative Commons BY 3.0"
+              >CC BY 3.0</a
+            >
           </div>
         </footer>
       </md-app-content>
@@ -170,6 +200,7 @@ footer {
 
 footer .credit {
   font-size: 0.8em;
+  margin-top: 0.5rem;
 }
 
 @media (min-width: 600px) {
