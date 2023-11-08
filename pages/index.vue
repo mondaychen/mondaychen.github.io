@@ -37,6 +37,15 @@
       <h2>Recent work</h2>
       <ul class="experience-list">
         <li>
+          <md-icon>ads_click</md-icon>
+          <div class="desc">
+            <a href="https://twitter.com/mengdi_en/status/1721965940680565166">
+              WebWand
+            </a>
+            - Vision AI-powered Autonomous Web Agent
+          </div>
+        </li>
+        <li>
           <md-icon>all_inbox</md-icon>
           <div class="desc">
             <a href="https://github.com/mondaychen/file_organizer">
