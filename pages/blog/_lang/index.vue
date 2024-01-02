@@ -30,6 +30,13 @@ export default {
   asyncData({ params }) {
     const lang = params.lang.toLowerCase()
     async function asyncImport(blog) {
+      if (!blog.file) {
+        return {
+          title: blog.url,
+          time: blog.time,
+          link: `/blog/${lang}/${blog.url}`,
+        }
+      }
       const md = await import(`~/contents/${blog.file}`)
       return {
         title: md.attributes.subject,

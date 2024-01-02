@@ -7,6 +7,12 @@ export default {
   ],
   cn: [
     {
+      url: '对React团队工作经历的思考',
+      gistId: '3c530604e44b9cd15e4f69735d99fef4',
+      filename: '对 React 团队工作经历的思考.md',
+      time: 1703829420000,
+    },
+    {
       url: '禅与静态个人站开发技术',
       file: 'cn/禅与静态个人站开发技术.md',
       links: [

@@ -54,6 +54,10 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons',
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://github.githubassets.com/assets/gist-embed-c77408be8058.css'
+      }
     ],
   },
 
