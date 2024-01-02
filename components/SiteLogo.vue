@@ -40,15 +40,16 @@
     display: block;
     margin: 0 auto;
     fill: $primary;
+    transition: all 0.3s;
   }
   .p2 {
-    transition: all 0.3s;
+    fill: $accent;
   }
   &:hover {
     background: none !important;
   }
-  &:hover .p2 {
-    fill: $accent;
+  &:hover svg {
+    transform: scale(0.97);
   }
   &:hover::before {
     background: #bbb;

@@ -60,14 +60,14 @@
         <li>
           <md-icon>code</md-icon>
           <div class="desc">
-            <a href="https://github.com/facebook/react">React</a> - The library
+            <a href="https://github.com/facebook/react">React</a> (former Core Team member, DevTools lead) - The library
             for web and native user interfaces
           </div>
         </li>
         <li>
           <md-icon>code</md-icon>
           <div class="desc">
-            <a href="https://github.com/facebookexperimental/Recoil">Recoil</a>
+            <a href="https://github.com/facebookexperimental/Recoil">Recoil</a> (former Maintainer)
             - Experimental state management library for React apps
           </div>
         </li>
@@ -76,17 +76,17 @@
       <ul class="experience-list">
         <li>
           <md-icon>work</md-icon>
-          <div class="desc">AI Engineer @ Normal Computing (2023-now)</div>
+          <div class="desc">Product Eng Lead @ Normal Computing (2023-now)</div>
         </li>
         <li>
           <md-icon>work</md-icon>
           <div class="desc">
-            Software Engineer @ Meta (Facebook) (2019-2023)
+            Sr. Software Engineer @ Meta (Facebook) (2019-2023)
           </div>
         </li>
         <li>
           <md-icon>work</md-icon>
-          <div class="desc">Software Engineer @ FreeWheel (2016-2019)</div>
+          <div class="desc">Sr. Software Engineer @ FreeWheel (2016-2019)</div>
         </li>
         <li>
           <md-icon>work</md-icon>
