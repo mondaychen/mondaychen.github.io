@@ -39,10 +39,10 @@
         <li>
           <md-icon>ads_click</md-icon>
           <div class="desc">
-            <a href="https://twitter.com/mengdi_en/status/1721965940680565166">
-              WebWand
+            <a href="https://github.com/normal-computing/fuji-web">
+              Fuji-Web
             </a>
-            - Vision AI-powered Autonomous Web Agent
+            -  A state-of-the-art Web Agent
           </div>
         </li>
         <li>
@@ -76,7 +76,7 @@
       <ul class="experience-list">
         <li>
           <md-icon>work</md-icon>
-          <div class="desc">Product Eng Lead @ Normal Computing (2023-now)</div>
+          <div class="desc">Staff AI Engineer @ Normal Computing (2023-now)</div>
         </li>
         <li>
           <md-icon>work</md-icon>
